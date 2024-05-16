@@ -1,9 +1,11 @@
 <template>
   <header>
     <nav>
-      <RouterLink :to="{ name: 'ArticleView'}">Articles</RouterLink>
-      <RouterLink :to="{ name: 'SignUpView'}">SignUpPage</RouterLink>
-      <RouterLink :to="{ name: 'LogInView'}">LogInPage</RouterLink>
+      <RouterLink :to="{ name: 'ArticleView'}">Articles</RouterLink><br>
+      <RouterLink :to="{ name: 'SignUpView'}">SignUpPage</RouterLink><br>
+      <RouterLink :to="{ name: 'LogInView'}">LogInPage</RouterLink><br>
+      <RouterLink :to="{ name: 'LogoutView'}">Logout</RouterLink><br>
+
     </nav>
   </header>
   <RouterView />

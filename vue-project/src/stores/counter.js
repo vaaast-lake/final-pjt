@@ -56,6 +56,12 @@ export const useCounterStore = defineStore('counter', () => {
     .catch(err => console.log(err))
   }
 
+  const logout = function () {
+    token.value = null
+    router.push({ name: 'LogInView' })
+    console.log('로그아웃 완료');
+  }
+
   const getArticles = function () {
     axios({
       method: 'get',
@@ -72,5 +78,5 @@ export const useCounterStore = defineStore('counter', () => {
     })
   }
 
-  return { API_URL, signUp, logIn, token, getArticles, articles, isLogin } 
+  return { API_URL, signUp, logIn, token, getArticles, articles, isLogin,logout } 
 }, { persist: true })
