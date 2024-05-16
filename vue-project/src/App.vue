@@ -13,9 +13,9 @@
 
 <script setup>
 import { RouterView, RouterLink } from 'vue-router'
-import { useCounterStore } from '@/stores/counter'
+import { useUserStore } from '@/stores/user'
 
-const store = useCounterStore()
+const store = useUserStore()
 const logOut = () => {
   store.logout()
 }

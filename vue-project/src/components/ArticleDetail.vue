@@ -14,10 +14,10 @@
 <script setup>
 import axios from 'axios'
 import { onMounted, ref } from 'vue'
-import { useCounterStore } from '@/stores/counter'
+import { useUserStore } from '@/stores/user'
 import { useRoute } from 'vue-router'
 
-const store = useCounterStore()
+const store = useUserStore()
 const route = useRoute()
 const article = ref(null)
 

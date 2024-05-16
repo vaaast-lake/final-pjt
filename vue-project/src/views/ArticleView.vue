@@ -10,10 +10,10 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { useCounterStore } from '@/stores/counter'
+import { useUserStore } from '@/stores/user'
 import { RouterLink, RouterView } from 'vue-router'
 
-const store = useCounterStore()
+const store = useUserStore()
 
 onMounted(() => {
   store.getArticles()

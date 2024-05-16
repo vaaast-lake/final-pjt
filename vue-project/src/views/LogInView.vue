@@ -15,12 +15,12 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useCounterStore } from '@/stores/counter';
+import { useUserStore } from '@/stores/user';
 
 const username = ref(null)
 const password = ref(null)
 
-const store = useCounterStore()
+const store = useUserStore()
 
 const logIn = function () {
   const payload = {

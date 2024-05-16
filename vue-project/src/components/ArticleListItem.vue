@@ -4,7 +4,7 @@
     <p>{{ article.title }}</p>
     <p>{{ article.content }}</p>
     <RouterLink 
-      :to="{ name: 'DetailView', params: { id: article.id }}"
+      :to="{ name: 'article_detail', params: { id: article.id }}"
     >
       [DETAIL]
     </RouterLink>

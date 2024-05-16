@@ -11,10 +11,10 @@
 
 <script setup>
 import { onMounted } from 'vue';
-import { useCounterStore } from '@/stores/counter'
+import { useUserStore } from '@/stores/user'
 import ArticleListItem from '@/components/ArticleListItem.vue'
 
-const store = useCounterStore()
+const store = useUserStore()
 
 onMounted(() => {
   store.getArticles()
