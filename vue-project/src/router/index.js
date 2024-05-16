@@ -36,7 +36,7 @@ const router = createRouter({
 router.beforeEach((to, from) => {
   // to and from are both route objects. must call `next`.
   const store = useCounterStore()
-  if (to.name === 'ArticleView' && !store.isLogin) {
+  if (to.name === 'article_create' && !store.isLogin) {
     window.alert('need login')
     return { name: 'LogInView' }
   }
