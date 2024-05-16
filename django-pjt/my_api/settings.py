@@ -34,14 +34,17 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'articles',
     'accounts',
+    
     'rest_framework',
     'rest_framework.authtoken',
+    
     'dj_rest_auth',
     'corsheaders',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    
     'dj_rest_auth.registration',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -62,6 +65,12 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.AllowAny',
     ],
+}
+
+
+REST_AUTH = {
+    'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
+    # 'LOGIN_SERIALIZER': 'accounts.serializers.CustomLoginSerializer',
 }
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
