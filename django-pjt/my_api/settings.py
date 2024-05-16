@@ -71,6 +71,8 @@ REST_FRAMEWORK = {
 REST_AUTH = {
     'REGISTER_SERIALIZER': 'accounts.serializers.CustomRegisterSerializer',
     # 'LOGIN_SERIALIZER': 'accounts.serializers.CustomLoginSerializer',
+    
+    'USER_DETAILS_SERIALIZER': 'accounts.serializers.CustomUserDetailsSerializer',
 }
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
@@ -167,3 +169,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'accounts.User'
+
+ACCOUNT_ADAPTER  = 'accounts.models.CustomAccountAdapter'

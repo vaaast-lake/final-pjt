@@ -44,16 +44,19 @@ class CustomAccountAdapter(DefaultAccountAdapter):
         desire_amount_deposit = data.get("desire_amount_deposit")
         deposit_period = data.get("deposit_period")
         saving_period = data.get("saving_period")
-        
+        nickname = data.get("nickname")
 
         user_email(user, email)
         user_username(user, username)
+
         if first_name:
             user_field(user, "first_name", first_name)
         if last_name:
             user_field(user, "last_name", last_name)
         if name:
             user_field(user, "name", name)
+        if nickname:
+            user_field(user, "nickname", nickname)
         if profile_img:
             user.profile_img = profile_img
         if age:
