@@ -40,7 +40,7 @@ const createArticle = function () {
   })
     .then((response) => {
       // console.log(response.data)
-      router.push({ name: 'ArticleView' })
+      router.push({ name: 'articles' })
     })
     .catch((error) => {
       console.log(error)

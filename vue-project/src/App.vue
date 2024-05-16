@@ -1,12 +1,13 @@
 <template>
   <header>
     <nav>
-      <RouterLink :to="{ name: 'ArticleView'}">Articles</RouterLink><br>
+      <RouterLink :to="{ name: 'articles'}">Articles</RouterLink><br>
       <RouterLink :to="{ name: 'SignUpView'}">SignUpPage</RouterLink><br>
       <RouterLink :to="{ name: 'LogInView'}">LogInPage</RouterLink><br>
       <button @click="logOut">LOGOUT</button>
     </nav>
   </header>
+  <h1>App vue</h1>
   <RouterView />
 </template>
 

@@ -13,7 +13,7 @@ from .models import Article
 
 
 @api_view(['GET', 'POST'])
-@permission_classes([IsAuthenticated])
+# @permission_classes([IsAuthenticated])
 def article_list(request):
     if request.method == 'GET':
         articles = get_list_or_404(Article)
