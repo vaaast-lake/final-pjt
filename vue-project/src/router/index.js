@@ -4,7 +4,6 @@ import DetailView from '@/views/DetailView.vue'
 import CreateView from '@/views/CreateView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 import LogInView from '@/views/LogInView.vue'
-import LogoutView from '@/views/LogoutView.vue'
 import { useCounterStore } from '@/stores/counter'
 
 const router = createRouter({
@@ -35,11 +34,6 @@ const router = createRouter({
       name: 'LogInView',
       component: LogInView
     },
-    {
-      path: '/logout',
-      name: 'LogoutView',
-      component: LogoutView
-    }
   ]
 })
 

@@ -58,8 +58,18 @@ export const useCounterStore = defineStore('counter', () => {
 
   const logout = function () {
     token.value = null
+    axios({
+      method: 'post',
+      url: `${API_URL}/accounts/logout/`
+    })
+    .then(res => {
+      console.log(res);
+      console.log('로그아웃 완료');
+    })
+    .catch(err => {
+      console.log(err);
+    })
     router.push({ name: 'LogInView' })
-    console.log('로그아웃 완료');
   }
 
   const getArticles = function () {
@@ -78,5 +88,5 @@ export const useCounterStore = defineStore('counter', () => {
     })
   }
 
-  return { API_URL, signUp, logIn, token, getArticles, articles, isLogin,logout } 
+  return { API_URL, signUp, logIn, token, getArticles, articles, isLogin, logout } 
 }, { persist: true })
