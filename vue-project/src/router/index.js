@@ -1,11 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { useUserStore } from '@/stores/user'
 import ArticleView from '@/views/ArticleView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 import LogInView from '@/views/LogInView.vue'
-import { useCounterStore } from '@/stores/user'
 import ArticleList from '@/components/ArticleList.vue'
 import ArticleDetail from '@/components/ArticleDetail.vue'
 import ArticleCreate from '@/components/ArticleCreate.vue'
+import BankMapView from '@/views/BankMapView.vue' 
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,12 +31,17 @@ const router = createRouter({
       name: 'LogInView',
       component: LogInView
     },
+    {
+      path: '/bank',
+      name: 'bankMap',
+      component: BankMapView
+    },
   ]
 })
 
 router.beforeEach((to, from) => {
   // to and from are both route objects. must call `next`.
-  const store = useCounterStore()
+  const store = useUserStore()
   if (to.name === 'article_create' && !store.isLogin) {
     window.alert('need login')
     return { name: 'LogInView' }

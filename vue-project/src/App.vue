@@ -4,6 +4,7 @@
       <RouterLink :to="{ name: 'articles'}">Articles</RouterLink><br>
       <RouterLink :to="{ name: 'SignUpView'}">SignUpPage</RouterLink><br>
       <RouterLink :to="{ name: 'LogInView'}">LogInPage</RouterLink><br>
+      <RouterLink :to="{ name: 'bankMap'}">BankMap</RouterLink><br>
       <button @click="logOut">LOGOUT</button>
     </nav>
   </header>
